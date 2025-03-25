@@ -36,9 +36,9 @@
             // newRecipeBtn
             // 
             newRecipeBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            newRecipeBtn.Location = new Point(245, 153);
+            newRecipeBtn.Location = new Point(256, 154);
             newRecipeBtn.Name = "newRecipeBtn";
-            newRecipeBtn.Size = new Size(131, 23);
+            newRecipeBtn.Size = new Size(160, 23);
             newRecipeBtn.TabIndex = 1;
             newRecipeBtn.Text = "Create new recipe";
             newRecipeBtn.UseVisualStyleBackColor = true;
@@ -46,9 +46,10 @@
             // 
             // recipeListBox
             // 
+            recipeListBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             recipeListBox.FormattingEnabled = true;
             recipeListBox.ItemHeight = 15;
-            recipeListBox.Location = new Point(256, 228);
+            recipeListBox.Location = new Point(275, 229);
             recipeListBox.Name = "recipeListBox";
             recipeListBox.Size = new Size(120, 94);
             recipeListBox.TabIndex = 2;
@@ -58,7 +59,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(655, 440);
+            ClientSize = new Size(684, 461);
             Controls.Add(recipeListBox);
             Controls.Add(newRecipeBtn);
             Name = "MainForm";

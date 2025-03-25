@@ -36,31 +36,37 @@
             // 
             // RecipeNameBox
             // 
-            RecipeNameBox.Location = new Point(314, 124);
+            RecipeNameBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RecipeNameBox.Location = new Point(245, 116);
             RecipeNameBox.Name = "RecipeNameBox";
+            RecipeNameBox.PlaceholderText = "Enter recipe name...";
             RecipeNameBox.Size = new Size(166, 23);
             RecipeNameBox.TabIndex = 0;
             // 
             // RecipeDescBox
             // 
-            RecipeDescBox.Location = new Point(314, 172);
+            RecipeDescBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RecipeDescBox.Location = new Point(245, 162);
             RecipeDescBox.Name = "RecipeDescBox";
+            RecipeDescBox.PlaceholderText = "Enter recipe description..";
             RecipeDescBox.Size = new Size(166, 23);
             RecipeDescBox.TabIndex = 1;
             // 
             // RecipeIngrBox
             // 
-            RecipeIngrBox.Location = new Point(314, 220);
+            RecipeIngrBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RecipeIngrBox.Location = new Point(245, 210);
             RecipeIngrBox.Name = "RecipeIngrBox";
+            RecipeIngrBox.PlaceholderText = "Enter ingredients...";
             RecipeIngrBox.Size = new Size(166, 23);
             RecipeIngrBox.TabIndex = 2;
             // 
             // AddRecipeBtn
             // 
             AddRecipeBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AddRecipeBtn.Location = new Point(360, 281);
+            AddRecipeBtn.Location = new Point(283, 280);
             AddRecipeBtn.Name = "AddRecipeBtn";
-            AddRecipeBtn.Size = new Size(75, 23);
+            AddRecipeBtn.Size = new Size(86, 23);
             AddRecipeBtn.TabIndex = 3;
             AddRecipeBtn.Text = "Add Recipe";
             AddRecipeBtn.UseVisualStyleBackColor = true;
@@ -70,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 461);
             Controls.Add(AddRecipeBtn);
             Controls.Add(RecipeIngrBox);
             Controls.Add(RecipeDescBox);

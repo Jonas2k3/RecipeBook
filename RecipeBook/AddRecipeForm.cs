@@ -12,9 +12,12 @@ namespace RecipeBook
 {
     public partial class AddRecipeForm : Form
     {
-    
-        public Recipe NewRecipe { get; set; }
-    
+
+        public Recipe NewRecipe
+        {
+            get; set;
+        }
+
         public AddRecipeForm()
         {
             InitializeComponent();
@@ -22,23 +25,32 @@ namespace RecipeBook
 
         private void AddRecipeBtn_Click(object sender, EventArgs e)
         {
-            string recipeName = RecipeNameBox.Text;
-            string recipeDesc = RecipeDescBox.Text;
-            string recipeIngredients = RecipeIngrBox.Text;
-
-            List<string> ingredients = new List<string>();
-            string[] ingredientSplit = recipeIngredients.Split(' ');
-
-            foreach (string ingredient in ingredientSplit)
+            try
             {
-                ingredients.Add(ingredient);
+                string recipeName = RecipeNameBox.Text;
+                string recipeDesc = RecipeDescBox.Text;
+                string recipeIngredients = RecipeIngrBox.Text;
+
+                if (string.IsNullOrWhiteSpace(recipeName) || string.IsNullOrWhiteSpace(recipeDesc) || string.IsNullOrWhiteSpace(recipeIngredients))
+                {
+                    throw new ArgumentException("Please enter a value in all fields.");
+                }
+
+                List<string> ingredients = recipeIngredients.Split(' ').ToList();
+                NewRecipe = new Recipe(recipeName, recipeDesc, ingredients);
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-
-            NewRecipe = new Recipe(recipeName, recipeDesc, ingredients);
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-            
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }
