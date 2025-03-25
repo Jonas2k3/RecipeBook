@@ -1,6 +1,6 @@
 ﻿namespace RecipeBook
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,35 +29,48 @@
         private void InitializeComponent()
         {
             folderBrowserDialog1 = new FolderBrowserDialog();
-            label1 = new Label();
+            newRecipeBtn = new Button();
+            recipeListBox = new ListBox();
             SuspendLayout();
             // 
-            // label1
+            // newRecipeBtn
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(-29, 403);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            newRecipeBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            newRecipeBtn.Location = new Point(245, 153);
+            newRecipeBtn.Name = "newRecipeBtn";
+            newRecipeBtn.Size = new Size(131, 23);
+            newRecipeBtn.TabIndex = 1;
+            newRecipeBtn.Text = "Create new recipe";
+            newRecipeBtn.UseVisualStyleBackColor = true;
+            newRecipeBtn.Click += newRecipeBtn_Click;
             // 
-            // Form1
+            // recipeListBox
+            // 
+            recipeListBox.FormattingEnabled = true;
+            recipeListBox.ItemHeight = 15;
+            recipeListBox.Location = new Point(256, 228);
+            recipeListBox.Name = "recipeListBox";
+            recipeListBox.Size = new Size(120, 94);
+            recipeListBox.TabIndex = 2;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(665, 474);
-            Controls.Add(label1);
-            Name = "Form1";
+            ClientSize = new Size(655, 440);
+            Controls.Add(recipeListBox);
+            Controls.Add(newRecipeBtn);
+            Name = "MainForm";
             Text = "RecipeBook";
             Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private FolderBrowserDialog folderBrowserDialog1;
-        private Label label1;
+        private Button newRecipeBtn;
+        private ListBox recipeListBox;
     }
 }
