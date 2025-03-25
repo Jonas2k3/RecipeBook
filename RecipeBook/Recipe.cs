@@ -14,14 +14,19 @@ namespace RecipeBook
             get; set;
         }
 
-        // Private field for ingredients
+        public string Type
+        {
+            get; set;
+        }
+
         private List<string> ingredients;
 
-        public Recipe(string name, string description, List<string> ingredients)
+        public Recipe(string name, string description, List<string> ingredients, string type)
         {
             Name = name;
             Description = description;
-            this.ingredients = new List<string>(ingredients); // Create a copy of the list
+            this.ingredients = new List<string>(ingredients);
+            Type = type;
         }
 
         public void AddIngredient(string ingredient)
@@ -44,7 +49,7 @@ namespace RecipeBook
             }
             else
             {
-                ingredients.Remove(ingredient); // Directly remove the ingredient
+                ingredients.Remove(ingredient);
             }
         }
     }

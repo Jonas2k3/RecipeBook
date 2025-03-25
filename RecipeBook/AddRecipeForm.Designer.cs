@@ -32,6 +32,7 @@
             RecipeDescBox = new TextBox();
             RecipeIngrBox = new TextBox();
             AddRecipeBtn = new Button();
+            RecipeTypeBox = new TextBox();
             SuspendLayout();
             // 
             // RecipeNameBox
@@ -64,7 +65,7 @@
             // AddRecipeBtn
             // 
             AddRecipeBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AddRecipeBtn.Location = new Point(283, 280);
+            AddRecipeBtn.Location = new Point(279, 309);
             AddRecipeBtn.Name = "AddRecipeBtn";
             AddRecipeBtn.Size = new Size(86, 23);
             AddRecipeBtn.TabIndex = 3;
@@ -72,11 +73,20 @@
             AddRecipeBtn.UseVisualStyleBackColor = true;
             AddRecipeBtn.Click += AddRecipeBtn_Click;
             // 
+            // RecipeTypeBox
+            // 
+            RecipeTypeBox.Location = new Point(245, 260);
+            RecipeTypeBox.Name = "RecipeTypeBox";
+            RecipeTypeBox.PlaceholderText = "Enter type...";
+            RecipeTypeBox.Size = new Size(166, 23);
+            RecipeTypeBox.TabIndex = 4;
+            // 
             // AddRecipeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 461);
+            Controls.Add(RecipeTypeBox);
             Controls.Add(AddRecipeBtn);
             Controls.Add(RecipeIngrBox);
             Controls.Add(RecipeDescBox);
@@ -93,5 +103,6 @@
         private TextBox RecipeDescBox;
         private TextBox RecipeIngrBox;
         private Button AddRecipeBtn;
+        private TextBox RecipeTypeBox;
     }
 }

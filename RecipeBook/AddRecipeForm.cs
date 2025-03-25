@@ -30,14 +30,15 @@ namespace RecipeBook
                 string recipeName = RecipeNameBox.Text;
                 string recipeDesc = RecipeDescBox.Text;
                 string recipeIngredients = RecipeIngrBox.Text;
+                string recipeType = RecipeTypeBox.Text;
 
-                if (string.IsNullOrWhiteSpace(recipeName) || string.IsNullOrWhiteSpace(recipeDesc) || string.IsNullOrWhiteSpace(recipeIngredients))
+                if (string.IsNullOrWhiteSpace(recipeName) || string.IsNullOrWhiteSpace(recipeDesc) || string.IsNullOrWhiteSpace(recipeIngredients) || string.IsNullOrWhiteSpace(recipeType))
                 {
                     throw new ArgumentException("Please enter a value in all fields.");
                 }
 
                 List<string> ingredients = recipeIngredients.Split(' ').ToList();
-                NewRecipe = new Recipe(recipeName, recipeDesc, ingredients);
+                NewRecipe = new Recipe(recipeName, recipeDesc, ingredients, recipeType);
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -51,6 +52,5 @@ namespace RecipeBook
                 MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
