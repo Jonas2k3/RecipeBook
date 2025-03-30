@@ -37,7 +37,8 @@ namespace RecipeBook
                     throw new ArgumentException("Please enter a value in all fields.");
                 }
 
-                List<string> ingredients = recipeIngredients.Split(' ').ToList();
+                List<string> ingredients = recipeIngredients.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None).ToList();
+
                 NewRecipe = new Recipe(recipeName, recipeDesc, ingredients, recipeType);
 
                 this.DialogResult = DialogResult.OK;
@@ -51,6 +52,11 @@ namespace RecipeBook
             {
                 MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void RecipeIngrBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

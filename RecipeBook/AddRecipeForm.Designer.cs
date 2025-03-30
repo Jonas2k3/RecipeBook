@@ -56,16 +56,18 @@
             // RecipeIngrBox
             // 
             RecipeIngrBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RecipeIngrBox.Location = new Point(245, 210);
+            RecipeIngrBox.Location = new Point(245, 208);
+            RecipeIngrBox.Multiline = true;
             RecipeIngrBox.Name = "RecipeIngrBox";
             RecipeIngrBox.PlaceholderText = "Enter ingredients... [seperated by spaces[";
-            RecipeIngrBox.Size = new Size(166, 23);
+            RecipeIngrBox.Size = new Size(166, 126);
             RecipeIngrBox.TabIndex = 2;
+            RecipeIngrBox.TextChanged += RecipeIngrBox_TextChanged;
             // 
             // AddRecipeBtn
             // 
             AddRecipeBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AddRecipeBtn.Location = new Point(279, 309);
+            AddRecipeBtn.Location = new Point(280, 381);
             AddRecipeBtn.Name = "AddRecipeBtn";
             AddRecipeBtn.Size = new Size(86, 23);
             AddRecipeBtn.TabIndex = 4;
@@ -75,7 +77,7 @@
             // 
             // RecipeTypeBox
             // 
-            RecipeTypeBox.Location = new Point(245, 260);
+            RecipeTypeBox.Location = new Point(245, 340);
             RecipeTypeBox.Name = "RecipeTypeBox";
             RecipeTypeBox.PlaceholderText = "Enter type...";
             RecipeTypeBox.Size = new Size(166, 23);
