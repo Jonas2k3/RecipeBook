@@ -64,6 +64,7 @@
             recipeIngredientsBox.Name = "recipeIngredientsBox";
             recipeIngredientsBox.Size = new Size(120, 94);
             recipeIngredientsBox.TabIndex = 3;
+            recipeIngredientsBox.SelectedIndexChanged += recipeIngredientsBox_SelectedIndexChanged;
             // 
             // saveRecipeBtn
             // 
