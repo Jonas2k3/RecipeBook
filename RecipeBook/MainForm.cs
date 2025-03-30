@@ -39,7 +39,7 @@ namespace RecipeBook
             recipeListBox.Items.Clear();
             foreach (Recipe recipe in recipeList)
             {
-                recipeListBox.Items.Add(recipe.Name);
+                recipeListBox.Items.Add(recipe.name);
             }
         }
     }

@@ -5,28 +5,28 @@ namespace RecipeBook
 {
     public class Recipe
     {
-        public string Name
+        public string name
         {
             get; set;
         }
-        public string Description
-        {
-            get; set;
-        }
-
-        public string Type
+        public string instructions
         {
             get; set;
         }
 
-        private List<string> ingredients;
-
-        public Recipe(string name, string description, List<string> ingredients, string type)
+        public string type
         {
-            Name = name;
-            Description = description;
+            get; set;
+        }
+
+        public List<string> ingredients;
+
+        public Recipe(string name, string instructions, List<string> ingredients, string type)
+        {
+            this.name = name;
+            this.instructions = instructions;
             this.ingredients = new List<string>(ingredients);
-            Type = type;
+            this.type = type;
         }
 
         public void AddIngredient(string ingredient)
@@ -51,6 +51,21 @@ namespace RecipeBook
             {
                 ingredients.Remove(ingredient);
             }
+        }
+
+        public void ChangeType(string type)
+        {
+        this.type = type;
+        }
+
+        public void ChangeName(string name)
+        {
+            this.name = name;
+        }
+
+        public void ChangeInstructions(string instructions)
+        {
+        this.instructions = instructions;
         }
     }
 }

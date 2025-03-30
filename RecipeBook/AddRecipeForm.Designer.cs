@@ -68,7 +68,7 @@
             AddRecipeBtn.Location = new Point(279, 309);
             AddRecipeBtn.Name = "AddRecipeBtn";
             AddRecipeBtn.Size = new Size(86, 23);
-            AddRecipeBtn.TabIndex = 3;
+            AddRecipeBtn.TabIndex = 4;
             AddRecipeBtn.Text = "Add Recipe";
             AddRecipeBtn.UseVisualStyleBackColor = true;
             AddRecipeBtn.Click += AddRecipeBtn_Click;
@@ -79,7 +79,7 @@
             RecipeTypeBox.Name = "RecipeTypeBox";
             RecipeTypeBox.PlaceholderText = "Enter type...";
             RecipeTypeBox.Size = new Size(166, 23);
-            RecipeTypeBox.TabIndex = 4;
+            RecipeTypeBox.TabIndex = 3;
             // 
             // AddRecipeForm
             // 
