@@ -55,14 +55,23 @@ namespace RecipeBook
         {
             if (recipeIngredientsBox.SelectedItem != null && recipeIngredientsBox.SelectedIndex != -1)
             {
-                string selectedIngredient = recipeIngredientsBox.SelectedItem.ToString();
-                EditIngredientForm newForm = new EditIngredientForm(selectedIngredient);
 
-                if (newForm.ShowDialog() == DialogResult.OK)
+                int selectedIndex = recipeIngredientsBox.SelectedIndex;
+                string selectedIngredient = recipeIngredientsBox.SelectedItem.ToString();
+
+                EditIngredientForm newForm = new EditIngredientForm(selectedIngredient, selectedIndex);
+
+                DialogResult result = newForm.ShowDialog();
+
+                if (result == DialogResult.OK)
                 {
-                    int selectedIndex = recipeIngredientsBox.SelectedIndex;
                     recipe.ingredients[selectedIndex] = newForm.EditedIngredient;
                     recipeIngredientsBox.Items[selectedIndex] = newForm.EditedIngredient;
+                }
+                else if(result == DialogResult.Abort)
+                {
+                    recipe.ingredients.RemoveAt(selectedIndex);
+                    recipeIngredientsBox.Items.RemoveAt(selectedIndex);
                 }
             }
         }
