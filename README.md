@@ -10,6 +10,5 @@
 - edit recipes
   - add/remove ingredients
   - change type
-- sort by ingredient(s)
 - sort by type
 - random recipe
