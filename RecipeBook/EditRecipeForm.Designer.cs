@@ -34,6 +34,7 @@
             recipeIngredientsBox = new ListBox();
             saveRecipeBtn = new Button();
             deleteBtn = new Button();
+            addIngredientBtn = new Button();
             SuspendLayout();
             // 
             // recipeNameBox
@@ -61,16 +62,16 @@
             // 
             recipeIngredientsBox.FormattingEnabled = true;
             recipeIngredientsBox.ItemHeight = 15;
-            recipeIngredientsBox.Location = new Point(317, 170);
+            recipeIngredientsBox.Location = new Point(297, 170);
             recipeIngredientsBox.Name = "recipeIngredientsBox";
-            recipeIngredientsBox.Size = new Size(120, 94);
+            recipeIngredientsBox.Size = new Size(159, 94);
             recipeIngredientsBox.TabIndex = 3;
             recipeIngredientsBox.SelectedIndexChanged += recipeIngredientsBox_SelectedIndexChanged;
             // 
             // saveRecipeBtn
             // 
             saveRecipeBtn.BackColor = Color.Lime;
-            saveRecipeBtn.Location = new Point(336, 270);
+            saveRecipeBtn.Location = new Point(338, 299);
             saveRecipeBtn.Name = "saveRecipeBtn";
             saveRecipeBtn.Size = new Size(75, 23);
             saveRecipeBtn.TabIndex = 4;
@@ -81,7 +82,7 @@
             // deleteBtn
             // 
             deleteBtn.BackColor = Color.Red;
-            deleteBtn.Location = new Point(336, 299);
+            deleteBtn.Location = new Point(338, 323);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(75, 23);
             deleteBtn.TabIndex = 5;
@@ -89,11 +90,22 @@
             deleteBtn.UseVisualStyleBackColor = false;
             deleteBtn.Click += deleteBtn_Click;
             // 
+            // addIngredientBtn
+            // 
+            addIngredientBtn.Location = new Point(326, 270);
+            addIngredientBtn.Name = "addIngredientBtn";
+            addIngredientBtn.Size = new Size(100, 23);
+            addIngredientBtn.TabIndex = 6;
+            addIngredientBtn.Text = "Add ingredient";
+            addIngredientBtn.UseVisualStyleBackColor = true;
+            addIngredientBtn.Click += addIngredientBtn_Click;
+            // 
             // EditRecipeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(addIngredientBtn);
             Controls.Add(deleteBtn);
             Controls.Add(saveRecipeBtn);
             Controls.Add(recipeIngredientsBox);
@@ -115,5 +127,6 @@
         private ListBox recipeIngredientsBox;
         private Button saveRecipeBtn;
         private Button deleteBtn;
+        private Button addIngredientBtn;
     }
 }

@@ -66,7 +66,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(316, 148);
+            ClientSize = new Size(288, 148);
             Controls.Add(deleteBtn);
             Controls.Add(saveBtn);
             Controls.Add(ingredientBox);

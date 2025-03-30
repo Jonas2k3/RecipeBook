@@ -43,7 +43,7 @@ namespace RecipeBook
             this.Close();
         }
 
-        
+
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -68,11 +68,24 @@ namespace RecipeBook
                     recipe.ingredients[selectedIndex] = newForm.EditedIngredient;
                     recipeIngredientsBox.Items[selectedIndex] = newForm.EditedIngredient;
                 }
-                else if(result == DialogResult.Abort)
+                else if (result == DialogResult.Abort)
                 {
                     recipe.ingredients.RemoveAt(selectedIndex);
                     recipeIngredientsBox.Items.RemoveAt(selectedIndex);
                 }
+            }
+        }
+
+        private void addIngredientBtn_Click(object sender, EventArgs e)
+        {
+            AddIngredientForm newForm = new AddIngredientForm(this);
+            newForm.ShowDialog();
+
+            if(newForm.DialogResult == DialogResult.OK)
+            {
+                recipe.AddIngredient(newForm.ingredient);
+
+                recipeIngredientsBox.Items.Add(newForm.ingredient);
             }
         }
     }
