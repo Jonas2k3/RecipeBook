@@ -67,5 +67,12 @@ namespace RecipeBook
         {
         this.instructions = instructions;
         }
+
+
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

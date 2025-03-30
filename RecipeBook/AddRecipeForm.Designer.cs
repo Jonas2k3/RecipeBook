@@ -58,7 +58,7 @@
             RecipeIngrBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             RecipeIngrBox.Location = new Point(245, 210);
             RecipeIngrBox.Name = "RecipeIngrBox";
-            RecipeIngrBox.PlaceholderText = "Enter ingredients...";
+            RecipeIngrBox.PlaceholderText = "Enter ingredients... [seperated by spaces[";
             RecipeIngrBox.Size = new Size(166, 23);
             RecipeIngrBox.TabIndex = 2;
             // 

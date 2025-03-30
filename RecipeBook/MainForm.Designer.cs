@@ -53,6 +53,7 @@
             recipeListBox.Name = "recipeListBox";
             recipeListBox.Size = new Size(120, 94);
             recipeListBox.TabIndex = 2;
+            recipeListBox.SelectedIndexChanged += recipeListBox_SelectedIndexChanged;
             // 
             // MainForm
             // 

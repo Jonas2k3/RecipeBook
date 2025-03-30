@@ -18,12 +18,12 @@ namespace RecipeBook
         private void newRecipeBtn_Click(object sender, EventArgs e)
         {
             AddRecipeForm addRecipeForm = new AddRecipeForm();
-            if(addRecipeForm.ShowDialog() == DialogResult.OK)
+            if (addRecipeForm.ShowDialog() == DialogResult.OK)
             {
                 Recipe newRecipe = addRecipeForm.NewRecipe;
                 AddRecipeToList(newRecipe);
             }
-            
+
         }
 
         public void AddRecipeToList(Recipe recipe)
@@ -34,12 +34,22 @@ namespace RecipeBook
             }
         }
 
-        private void UpdateRecipeListBox()
+        public void UpdateRecipeListBox()
         {
             recipeListBox.Items.Clear();
             foreach (Recipe recipe in recipeList)
             {
-                recipeListBox.Items.Add(recipe.name);
+                recipeListBox.Items.Add(recipe);
+            }
+        }
+
+        private void recipeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(recipeListBox.SelectedItem != null)
+            {
+                Recipe recipe = (Recipe)recipeListBox.SelectedItem;
+                EditRecipeForm newForm = new EditRecipeForm(recipe, this);
+                newForm.Show();
             }
         }
     }
