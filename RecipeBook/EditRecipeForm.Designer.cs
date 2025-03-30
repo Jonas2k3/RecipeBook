@@ -33,6 +33,7 @@
             recipeTypeBox = new TextBox();
             recipeIngredientsBox = new ListBox();
             saveRecipeBtn = new Button();
+            deleteBtn = new Button();
             SuspendLayout();
             // 
             // recipeNameBox
@@ -68,19 +69,32 @@
             // 
             // saveRecipeBtn
             // 
-            saveRecipeBtn.Location = new Point(340, 288);
+            saveRecipeBtn.BackColor = Color.Lime;
+            saveRecipeBtn.Location = new Point(336, 270);
             saveRecipeBtn.Name = "saveRecipeBtn";
             saveRecipeBtn.Size = new Size(75, 23);
             saveRecipeBtn.TabIndex = 4;
             saveRecipeBtn.Text = "Save";
-            saveRecipeBtn.UseVisualStyleBackColor = true;
+            saveRecipeBtn.UseVisualStyleBackColor = false;
             saveRecipeBtn.Click += saveRecipeBtn_Click;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.BackColor = Color.Red;
+            deleteBtn.Location = new Point(336, 299);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(75, 23);
+            deleteBtn.TabIndex = 5;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // EditRecipeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(deleteBtn);
             Controls.Add(saveRecipeBtn);
             Controls.Add(recipeIngredientsBox);
             Controls.Add(recipeTypeBox);
@@ -100,5 +114,6 @@
         private TextBox recipeTypeBox;
         private ListBox recipeIngredientsBox;
         private Button saveRecipeBtn;
+        private Button deleteBtn;
     }
 }

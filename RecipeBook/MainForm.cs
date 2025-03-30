@@ -23,7 +23,6 @@ namespace RecipeBook
                 Recipe newRecipe = addRecipeForm.NewRecipe;
                 AddRecipeToList(newRecipe);
             }
-
         }
 
         public void AddRecipeToList(Recipe recipe)
@@ -40,6 +39,19 @@ namespace RecipeBook
             foreach (Recipe recipe in recipeList)
             {
                 recipeListBox.Items.Add(recipe);
+            }
+        }
+
+
+        public void DeleteRecipeFromList(string name)
+        {
+            for (int i = recipeList.Count - 1; i >= 0; i--)
+            {
+                if (recipeList[i].name == name)
+                {
+                    recipeList.RemoveAt(i);
+                    UpdateRecipeListBox();
+                }
             }
         }
 

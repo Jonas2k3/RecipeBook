@@ -22,16 +22,13 @@ namespace RecipeBook
         }
 
         private void EditIngredientForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
             this.EditedIngredient = ingredientBox.Text;
             this.DialogResult = DialogResult.OK;
             this.Close();
-            
         }
     }
 }

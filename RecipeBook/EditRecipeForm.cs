@@ -39,19 +39,27 @@ namespace RecipeBook
             recipe.ChangeName(recipeNameBox.Text);
             recipe.ChangeInstructions(recipeInstructionsBox.Text);
             recipe.ChangeType(recipeTypeBox.Text);
-
             mainForm.UpdateRecipeListBox();
+            this.Close();
+        }
+
+        
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            mainForm.DeleteRecipeFromList(recipeNameBox.Text);
             this.Close();
         }
 
         private void recipeIngredientsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(recipeIngredientsBox.SelectedItem != null && recipeIngredientsBox.SelectedIndex != -1)
+            if (recipeIngredientsBox.SelectedItem != null && recipeIngredientsBox.SelectedIndex != -1)
             {
                 string selectedIngredient = recipeIngredientsBox.SelectedItem.ToString();
                 EditIngredientForm newForm = new EditIngredientForm(selectedIngredient);
 
-                if(newForm.ShowDialog() == DialogResult.OK) { 
+                if (newForm.ShowDialog() == DialogResult.OK)
+                {
                     int selectedIndex = recipeIngredientsBox.SelectedIndex;
                     recipe.ingredients[selectedIndex] = newForm.EditedIngredient;
                     recipeIngredientsBox.Items[selectedIndex] = newForm.EditedIngredient;
