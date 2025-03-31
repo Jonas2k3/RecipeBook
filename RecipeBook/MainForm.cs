@@ -10,11 +10,6 @@ namespace RecipeBook
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void newRecipeBtn_Click(object sender, EventArgs e)
         {
             AddRecipeForm addRecipeForm = new AddRecipeForm();
@@ -57,9 +52,21 @@ namespace RecipeBook
 
         private void recipeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(recipeListBox.SelectedItem != null)
+            if (recipeListBox.SelectedItem != null)
             {
                 Recipe recipe = (Recipe)recipeListBox.SelectedItem;
+                EditRecipeForm newForm = new EditRecipeForm(recipe, this);
+                newForm.Show();
+            }
+        }
+
+        private void randomRecipeBtn_Click(object sender, EventArgs e)
+        {
+            if(recipeList.Count > 0)
+            {
+                Random random = new Random();
+                int rnd = random.Next(recipeList.Count);
+                Recipe recipe = recipeList[rnd];
                 EditRecipeForm newForm = new EditRecipeForm(recipe, this);
                 newForm.Show();
             }

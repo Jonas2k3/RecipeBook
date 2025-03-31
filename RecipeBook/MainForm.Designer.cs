@@ -31,6 +31,7 @@
             folderBrowserDialog1 = new FolderBrowserDialog();
             newRecipeBtn = new Button();
             recipeListBox = new ListBox();
+            randomRecipeBtn = new Button();
             SuspendLayout();
             // 
             // newRecipeBtn
@@ -49,11 +50,21 @@
             recipeListBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             recipeListBox.FormattingEnabled = true;
             recipeListBox.ItemHeight = 15;
-            recipeListBox.Location = new Point(275, 229);
+            recipeListBox.Location = new Point(276, 229);
             recipeListBox.Name = "recipeListBox";
             recipeListBox.Size = new Size(120, 94);
             recipeListBox.TabIndex = 2;
             recipeListBox.SelectedIndexChanged += recipeListBox_SelectedIndexChanged;
+            // 
+            // randomRecipeBtn
+            // 
+            randomRecipeBtn.Location = new Point(256, 360);
+            randomRecipeBtn.Name = "randomRecipeBtn";
+            randomRecipeBtn.Size = new Size(160, 23);
+            randomRecipeBtn.TabIndex = 3;
+            randomRecipeBtn.Text = "Random recipe";
+            randomRecipeBtn.UseVisualStyleBackColor = true;
+            randomRecipeBtn.Click += randomRecipeBtn_Click;
             // 
             // MainForm
             // 
@@ -61,11 +72,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(684, 461);
+            Controls.Add(randomRecipeBtn);
             Controls.Add(recipeListBox);
             Controls.Add(newRecipeBtn);
             Name = "MainForm";
             Text = "RecipeBook";
-            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -74,5 +85,6 @@
         private FolderBrowserDialog folderBrowserDialog1;
         private Button newRecipeBtn;
         private ListBox recipeListBox;
+        private Button randomRecipeBtn;
     }
 }
