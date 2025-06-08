@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "instructions": "1. Cook pasta.\n2. Prepare sauce with ground beef and tomatoes.\n3. Mix and serve.",
+    "type": "Main Course",
+    "ingredients": [
+      "Spaghetti",
+      "Ground beef",
+      "Tomato sauce",
+      "Onion",
+      "Garlic",
+      "Olive oil",
+      "Salt",
+      "Pepper"
+    ]
+  },
+  {
+    "name": "Pancakes",
+    "instructions": "1. Mix flour, eggs, milk, and sugar.\n2. Pour batter into pan.\n3. Cook until golden brown on both sides.",
+    "type": "Breakfast",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Sugar",
+      "Butter",
+      "Salt"
+    ]
+  }
+]

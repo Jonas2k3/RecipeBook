@@ -1,4 +1,6 @@
-﻿namespace RecipeBook
+﻿using System;
+
+namespace RecipeBook
 {
     partial class AddIngredientForm
     {

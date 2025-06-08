@@ -46,14 +46,16 @@
             // 
             // recipeInstructionsBox
             // 
-            recipeInstructionsBox.Location = new Point(326, 92);
+            recipeInstructionsBox.Location = new Point(295, 221);
+            recipeInstructionsBox.Multiline = true;
             recipeInstructionsBox.Name = "recipeInstructionsBox";
-            recipeInstructionsBox.Size = new Size(100, 23);
+            recipeInstructionsBox.ScrollBars = ScrollBars.Vertical;
+            recipeInstructionsBox.Size = new Size(159, 94);
             recipeInstructionsBox.TabIndex = 1;
             // 
             // recipeTypeBox
             // 
-            recipeTypeBox.Location = new Point(326, 121);
+            recipeTypeBox.Location = new Point(326, 92);
             recipeTypeBox.Name = "recipeTypeBox";
             recipeTypeBox.Size = new Size(100, 23);
             recipeTypeBox.TabIndex = 2;
@@ -62,7 +64,7 @@
             // 
             recipeIngredientsBox.FormattingEnabled = true;
             recipeIngredientsBox.ItemHeight = 15;
-            recipeIngredientsBox.Location = new Point(297, 170);
+            recipeIngredientsBox.Location = new Point(295, 121);
             recipeIngredientsBox.Name = "recipeIngredientsBox";
             recipeIngredientsBox.Size = new Size(159, 94);
             recipeIngredientsBox.TabIndex = 3;
@@ -71,7 +73,7 @@
             // saveRecipeBtn
             // 
             saveRecipeBtn.BackColor = Color.Lime;
-            saveRecipeBtn.Location = new Point(338, 299);
+            saveRecipeBtn.Location = new Point(336, 350);
             saveRecipeBtn.Name = "saveRecipeBtn";
             saveRecipeBtn.Size = new Size(75, 23);
             saveRecipeBtn.TabIndex = 4;
@@ -82,7 +84,7 @@
             // deleteBtn
             // 
             deleteBtn.BackColor = Color.Red;
-            deleteBtn.Location = new Point(338, 323);
+            deleteBtn.Location = new Point(336, 374);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(75, 23);
             deleteBtn.TabIndex = 5;
@@ -92,7 +94,7 @@
             // 
             // addIngredientBtn
             // 
-            addIngredientBtn.Location = new Point(326, 270);
+            addIngredientBtn.Location = new Point(324, 321);
             addIngredientBtn.Name = "addIngredientBtn";
             addIngredientBtn.Size = new Size(100, 23);
             addIngredientBtn.TabIndex = 6;
